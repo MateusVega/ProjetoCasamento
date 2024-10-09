@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7ebe8; /* Mesma cor de fundo */
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255); /* Transparente com opacidade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #8B2335;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B2335;
+}
+
+.nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8B2335;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:before {
+    width: 100%;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid #8B2335;
+    border-radius: 20px;
+    color: #8B2335;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #8B2335;
+    color: white;
+}
+
+/* Main Section */
+main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #f7ebe8;
+}
+
+main > div {
+    margin-top: 150px;
+    width: 90vw;
+    max-width: 1200px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+main > div > #header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main > div > #header > a {
+    width: 18%;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1.6em;
+    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main > div > #header > a#using {
+    background-color: #f1f1f1;
+}
+
+main > div > #header > a:hover:not(#using) {
+    background-color: #8B2335;
+    color: white;
+}
+
+main > div > #main {
+    width: 100%;
+    height: auto;
+    background-color: #8B2335;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+#topics {
+    margin-top: 30px;
+}
+
+.topic {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    position: relative;
+}
+
+.topic h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.topic p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.checkboxes {
+    display: none;
+    margin-top: 15px;
+}
+
+.topic.active .checkboxes {
+    display: block;
+}
+
+.checkboxes label {
+    font-size: 1.2em;
+    color: #333;
+    display: block;
+}
+
+.checkboxes input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#main button {
+    padding: 12px;
+    background-color: white; /* Fundo do botão */
+    color: #8B2335; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição para hover */
+    width: 100%;
+}
+
+#main button:hover {
+    background-color: rgb(224, 224, 224);
+    color: #A23848; /* Cor do fundo ao passar o mouse */
+}

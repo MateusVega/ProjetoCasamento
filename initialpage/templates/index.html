@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{% static 'initialpage/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'pagina_inicial' %}">Aliança</a>
+            </div>                       
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <video autoplay muted loop class="videoo">
+        <source src="{% static 'initialpage/video.mp4' %}" type="video/mp4">
+    </video>
+    <h1 class="titlecasa">Realize o Casamento dos Seus Sonhos</h1>
+    <div class="labelcasa">Planejar o dia do seu casamento deve ser uma experiência maravilhosa e sem estresse.<br>
+        Para ajudá-lo a criar a celebração perfeita, oferecemos uma seleção de pacotes<br>
+        personalizados que atendem a diferentes orçamentos e estilos. Cada pacote é projetado<br>
+        para transformar sua visão em realidade, garantindo que cada detalhe seja cuidadosamente 
+        considerado.
+    </div>
+    <div class="container">
+        <fieldset class="fieldset">
+            <table>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><h1 class="pacotetitle">Básico</h1></td>
+                </tr>
+                <tr>
+                    <td><b>Buffet:</b> Menu simples para 50 convidados.</td>
+                </tr>
+                <tr>
+                    <td><b>Decoração:</b> Decoração básica com flores e toalhas simples.</td>
+                </tr>
+                <tr>
+                    <td><b>Convites:</b> 50 convites digitais personalizados.</td>
+                </tr>
+                <tr>
+                    <td><b>Consultoria:</b> 2 horas de consultoria de planejamento.</td>
+                </tr>
+                <tr><td><br></td></tr><tr><td><br></td></tr><tr><td><br></td></tr>
+            </table>
+            <separator>
+                <div class="precos">
+                    <div class="parcela">12x</div>
+                    <div class="parcela">R$</div>
+                    <div class="preco">833</div>
+                    <div class="parcela">,33</div>
+                    <div class="parcela2">Ou <b>10.000,00</b> à vista</div>
+                </div>
+                <div class="botao">
+                    <a href="{% url 'account:index' %}" class="stylebotao">Criar Conta</a>
+                </div>
+            </separator>
+        </fieldset>
+
+        <fieldset class="fieldset">
+            <table>
+                <tr>
+                    <td><h1 class="pacotetitle">Intermediário</h1></td>
+                </tr>
+                <tr>
+                    <td><b>Buffet:</b> Menu variado para 100 convidados.</td>
+                </tr>
+                <tr>
+                    <td><b>Decoração:</b> Decoração personalizada com flores, arranjos e iluminação.</td>
+                </tr>
+                <tr>
+                    <td><b>Convites:</b> 100 convites impressos e personalizados.</td>
+                </tr>
+                <tr>
+                    <td><b>DJ:</b> Serviço de DJ para 4 horas.</td>
+                </tr>
+                <tr>
+                    <td><b>Fotografia:</b> Pacote de fotografia com álbum impresso.</td>
+                </tr>
+                <tr>
+                    <td><b>Consultoria:</b> 8 horas de consultoria de planejamento.</td>
+                </tr>
+                <tr><td><br></td></tr><tr><td><br></td></tr>
+            </table>
+            <div id="separator">
+                <div class="precos">
+                    <div class="parcela">24x</div>
+                    <div class="parcela">R$</div>
+                    <div class="preco">1250</div>
+                    <div class="parcela">,00</div>
+                    <div class="parcela2">Ou <b>30.000,00</b> à vista</div>
+                </div>
+                <div class="botao">
+                    <a href="{% url 'account:index' %}" class="stylebotao">Criar Conta</a>
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset class="fieldset">
+            <table>
+                <tr>
+                    <td><h1 class="pacotetitle">Completo</h1></td>
+                </tr>
+                <tr>
+                    <td><b>Buffet:</b> Menu gourmet para 200 convidados.</td>
+                </tr>
+                <tr>
+                    <td><b>Decoração:</b> Decoração luxuosa com design exclusivo, arranjos florais 
+                    elaborados e decoração temática.</td>
+                </tr>
+                <tr>
+                    <td><b>DJ + Banda:</b> DJ e banda ao vivo por 6 horas.</td>
+                </tr>
+                <tr>
+                    <td><b>Fotografia e Vídeo:</b> Pacote completo de fotografia e filmagem, incluindo highlights do dia.</td>
+                </tr>
+                <tr>
+                    <td><b>Consultoria:</b> Consultoria completa com planejamento e acompanhamento no dia do casamento.</td>
+                </tr>
+                <tr><td><br></td></tr><tr><td><br></td></tr>
+            </table>
+            <div id="separator">
+                <div class="precos">
+                    <div class="parcela">36x</div>
+                    <div class="parcela">R$</div>
+                    <div class="preco">1388</div>
+                    <div class="parcela">,88</div>
+                    <div class="parcela2">Ou <b>50.000,00</b> à vista</div>
+                </div>
+                <div class="botao">
+                    <a href="{% url 'account:index' %}" class="stylebotao">Criar Conta</a>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <div class="container2">
+        <div class="escrito">
+            <h1 class="titulo1">Aliança</h1>
+             Transformamos sonhos em realidade, oferecendo uma plataforma completa
+             para noivos e noivas que desejam planejar o casamento perfeito. Desde dicas de
+             planejamento, fornecedores confiáveis, inspirações de decoração até tendências
+             de moda nupcial, nosso site é o lugar ideal para você encontrar tudo o que precisa
+             para criar uma celebração inesquecível.
+            </div>
+    <div class="image">
+        <img src="{% static 'initialpage/casamento.jpg' %}" />
+    </div>
+    </div>
+    <footer>
+        <div class="rodape">
+            <p>&copy; 2024 Aliança Company. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

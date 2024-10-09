@@ -1,0 +1,261 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0px 50px;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #8B2335;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0px 50px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B2335;
+}
+
+.nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8B2335;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:before {
+    width: 100%;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid #8B2335;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #8B2335;
+    color: white;
+}
+
+.videoo {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+body {
+    background-color: #fffcf8;
+    margin-top: 130vh;
+}
+
+.titlecasa {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    color: #8B2335;
+    font-size: 2.6em;
+}
+
+.labelcasa {
+    text-align: center;
+    font-size: 22px;
+    color: #535353;
+    margin: 20px 0;
+    line-height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 140px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: none;
+    background-color: #fffcf8;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.693);
+    padding: 10px;
+    width: 20%;
+    font: 500 0.8rem / 1.7142 "Helvetica Neue", sans-serif;
+    color: rgb(31, 30, 30);
+    border-radius: 16px;
+    transition: transform .2s; /* Animation */
+}
+
+.fieldset:hover{
+    transform: scale(1.05);
+}
+
+
+.pacotetitle {
+    text-align: center;
+    color: #6b1523;
+    font-size: 2.5em;
+}
+
+.complemento {
+    color: #535353;
+}
+
+.precos {
+    text-align: center;
+}
+
+.parcela {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.preco {
+    font-family: "Helvetica Neue", sans-serif;
+    color: rgb(51, 51, 51);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    display: inline;
+    display: inline-block;
+    margin-bottom: -15px;
+}
+
+.parcela2 {
+    text-align: center;
+    font-family: "Helvetica Neue", sans-serif;
+    color: rgb(56, 56, 56);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.botao {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.stylebotao {
+    display: block;
+    text-align: center;
+    height: 48px;
+    width: 200px;
+    border: none;
+    background-color: #8B2335;
+    border-radius: 8px;
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    align-content: center;
+    text-decoration: none;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 180px;
+    background-color: #fffcf8;
+}
+
+.escrito {
+    padding-left: 190px;
+    flex: 1;
+    color: #2e2e2e;
+    justify-content: center;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 33px;
+    font-size: 21px;
+}
+
+.image {
+    margin-top: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.titulo1 {
+    text-align: left;
+    margin-bottom: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+footer {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

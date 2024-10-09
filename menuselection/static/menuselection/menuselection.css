@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    transition: background-color 0.3s ease;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0px 50px;
+}
+
+.logo a {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #8B2335;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0px 50px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #8B2335;
+}
+
+.nav-links a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #8B2335;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover:before {
+    width: 100%;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border: 1px solid #8B2335;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #8B2335;
+    color: white;
+}
+
+/* Main Section */
+main {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #f9f9f9; /* fundo da seção principal */
+}
+
+main > div {
+    margin-top: 150px;
+    width: 90vw;
+    max-width: 1200px;
+    height: auto;
+    background-color: white; /* fundo da caixa principal */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+main > div > #header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > div > #header > a {
+    width: 18%;
+    background-color: #e6e6e6; /* fundo dos links do cabeçalho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #333; /* cor padrão dos links */
+    font-size: 1.6em;
+    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main > div > #header > a#using {
+    background-color: #f1f1f1; /* fundo específico */
+}
+
+main > div > #header > a:hover:not(#using) {
+    background-color: #8B2335; /* fundo ao passar o mouse */
+    color: white; /* cor do texto ao passar o mouse */
+}
+
+main > div > #main {
+    width: 100%;
+    background-color: #f1f1f1; /* fundo da seção principal */
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Estilo do formulário */
+#main form {
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+    gap: 15px; /* Espaçamento entre os campos do formulário */
+}
+
+/* Estilo dos rótulos */
+#main label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333; /* Cor do texto dos rótulos */
+}
+
+/* Estilo dos campos de entrada */
+#main input[type="text"],
+#main input[type="date"] {
+    padding: 12px;
+    border: 1px solid #ccc; /* Borda leve */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s; /* Transição para foco */
+}
+
+#main input[type="text"]:focus,
+#main input[type="date"]:focus {
+    border-color: #8B2335; /* Cor da borda ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+}
+
+/* Estilo do botão de envio */
+#main button {
+    padding: 12px;
+    background-color: #8B2335; /* Fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição para hover */
+}
+
+#main button:hover {
+    background-color: #A23848; /* Cor do fundo ao passar o mouse */
+}
+
+/*Invite*/
+
+#title_main{
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 50px;
+}
+
+div#invite{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+div#invite span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+}
+
+input[type="radio"] {
+    width: 30px; /* Aumenta a largura do botão de rádio */
+    height: 30px; /* Aumenta a altura do botão de rádio */
+    margin: 15px auto;
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}

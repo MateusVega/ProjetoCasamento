@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança</title>
+    <link rel="stylesheet" href="{% static 'menuselection/menu.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300&display=swap">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'pagina_inicial' %}">Aliança</a>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <div id="header">
+                <a href="#">Formulario</a>
+                <a href="#" id="using">Items</a>
+                <a href="#">Convite</a>
+                <a href="#">Revisão</a>
+                <a href="#">Pagamento</a>
+            </div>
+            <div id="main">
+                <div id="topics">
+                    <form action="{% url 'menusel:invite' %}" method="post">
+                        {% csrf_token %}
+                        <div class="topic" onclick="toggleCheckboxes(this)">
+                            <h2>Decorações</h2>
+                            <p>Planeje as decorações da cerimônia e da festa, garantindo que o ambiente esteja alinhado ao seu estilo.</p>
+                            <div class="checkboxes">
+                                <label><input type="checkbox" name="decoracao[]" value="1"> Luzes</label>
+                                <label><input type="checkbox" name="decoracao[]" value="2"> Mesa de bolo</label>
+                                <label><input type="checkbox" name="decoracao[]" value="3"> Toalhas de mesa</label>
+                                <label><input type="checkbox" name="decoracao[]" value="4"> Cadeiras decoradas</label>
+                                <label><input type="checkbox" name="decoracao[]" value="5"> Arranjos de mesa</label>
+                                <label><input type="checkbox" name="decoracao[]" value="6"> Painéis decorativos</label>
+                            </div>
+                        </div>                        
+                        <div class="topic" onclick="toggleCheckboxes(this)">
+                            <h2>Buffet</h2>
+                            <p>Escolha o cardápio ideal para seus convidados, com opções que agradam todos os gostos.</p>
+                            <div class="checkboxes">
+                                <label><input type="checkbox" name="buffet[]" value="1"> Entradas</label> <!-- 1 -->
+                                <label><input type="checkbox" name="buffet[]" value="2"> Pratos principais</label> <!-- 2 -->
+                                <label><input type="checkbox" name="buffet[]" value="3"> Bebidas</label> <!-- 3 -->
+                                <label><input type="checkbox" name="buffet[]" value="4"> Sobremesas</label> <!-- 4 -->
+                                <label><input type="checkbox" name="buffet[]" value="5"> Estações de comida</label> <!-- 5 -->
+                                <label><input type="checkbox" name="buffet[]" value="6"> Cardápio infantil</label> <!-- 6 -->
+                            </div>
+                        </div>
+                        <div class="topic" onclick="toggleCheckboxes(this)">
+                            <h2>Itens da Cerimônia</h2>
+                            <p>Verifique todos os itens essenciais para a cerimônia, como alianças, tapete, velas, e outros detalhes.</p>
+                            <div class="checkboxes">
+                                <label><input type="checkbox" name="items_cerimonia[]" value="1"> Alianças</label> <!-- 1 -->
+                                <label><input type="checkbox" name="items_cerimonia[]" value="2"> Tapete</label> <!-- 2 -->
+                                <label><input type="checkbox" name="items_cerimonia[]" value="3"> Velas</label> <!-- 3 -->
+                                <label><input type="checkbox" name="items_cerimonia[]" value="4"> Música</label> <!-- 4 -->
+                                <label><input type="checkbox" name="items_cerimonia[]" value="5"> Livro de assinaturas</label>
+                                <label><input type="checkbox" name="items_cerimonia[]" value="6"> Decoração do altar</label>
+                            </div>
+                        </div>
+                        <div class="topic" onclick="toggleCheckboxes(this)">
+                            <h2>Transportes</h2>
+                            <p>Organize o transporte dos noivos, padrinhos e convidados, garantindo a pontualidade no dia do evento.</p>
+                            <div class="checkboxes">
+                                <label><input type="checkbox" name="transporte[]" value="1"> Carro dos noivos</label> <!-- 1 -->
+                                <label><input type="checkbox" name="transporte[]"  value="2"> Ônibus para convidados</label> 
+                                <label><input type="checkbox" name="transporte[]"  value="3"> Carro para padrinhos</label> <!-- 3 -->
+                                <label><input type="checkbox" name="transporte[]"  value="4"> Carro de luxo</label> <!-- 4 -->
+                                <label><input type="checkbox" name="transporte[]"  value="5"> Outros</label> <!-- 5 -->
+                            </div>
+                        </div>
+                        <div class="topic" onclick="toggleCheckboxes(this)">
+                            <h2>Flores e Buquês</h2>
+                            <p>Escolha as flores e buquês que irão compor a decoração e os arranjos principais da cerimônia.</p>
+                            <div class="checkboxes">
+                                <label><input type="checkbox" name="flores[]" value="1"> Buquê da noiva</label> <!-- 1 -->
+                                <label><input type="checkbox" name="flores[]" value="2"> Flores da cerimônia</label> <!-- 2 -->
+                                <label><input type="checkbox" name="flores[]" value="3"> Arranjos de mesa</label> <!-- 3 -->
+                                <label><input type="checkbox" name="flores[]" value="4"> Buquê das madrinhas</label> <!-- 4 -->
+                                <label><input type="checkbox" name="flores[]" value="5"> Flores para o altar</label> <!-- 5 -->
+                                <label><input type="checkbox" name="flores[]" value="6"> Outros arranjos florais</label> <!-- 6 -->
+                            </div>
+                        </div>
+                        
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleCheckboxes(topic) {
+            topic.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança</title>
+    <link rel="stylesheet" href="{% static 'menuselection/menuselection.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'pagina_inicial' %}">Aliança</a>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div id="header">
+                <a href="#">Formulario</a>
+                <a href="#">Items</a>
+                <a href="#" id="using">Convite</a>
+                <a href="#">Revisão</a>
+                <a href="#">Pagamento</a>
+            </div>
+            <div id="main">
+                <h2 id="title_main">Opções de Convite</h2>
+                <form action="{% url 'menusel:review' %}" method="post">
+                    {% csrf_token %}
+                    <div id="invite">
+                        <span>
+                            <img src="{% static 'menuselection/convite1.png' %}">
+                            <input type="radio" name="invite" value=1>
+                        </span>
+                        <span>
+                            <img src="{% static 'menuselection/convite2.png' %}">
+                            <input type="radio" name="invite" value=2>
+                        </span>
+                        <span>
+                            <img src="{% static 'menuselection/convite3.png' %}">
+                            <input type="radio" name="invite" value=3>
+                        </span>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

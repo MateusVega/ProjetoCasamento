@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300&display=swap">
+    <link rel="stylesheet" href="{% static 'payment/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'pagina_inicial' %}">Aliança</a>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <div id="header">
+                <a href="#">Formulario</a>
+                <a href="#">Items</a>
+                <a href="#">Convite</a>
+                <a href="#">Revisão</a>
+                <a href="#" id="using">Pagamento</a>
+            </div>
+            <div id="main">
+                <div id="topics">
+                    <div id="payment">
+                        <div class="line"></div>
+                        <h1>Formas de Pagamento</h1>
+                        <form id="payment-form">
+                            <div>
+                                <h3>Forma de Pagamento:</h3>
+                                <label><input type="radio" name="payment-method" value="credit-card" required> Cartão de Crédito</label>
+                                <label><input type="radio" name="payment-method" value="debit-card"> Cartão de Débito</label>
+                                <label><input type="radio" name="payment-method" value="pix"> Pix</label>
+                            </div>
+
+                            <div class="pix-container hidden" id="pix-info">
+                                <h3>Pagamento via Pix</h3>
+                                <img src="https://afinz.com.br/wp-content/uploads/2022/04/QR_Code_Afinz.png" alt="QR Code do Pix">
+                                <p>Faça o pagamento via Pix e confirme seus dados.</p>
+                            </div>
+
+                            <div class="card-fields" id="card-fields">
+                                <label for="card-number">Número do Cartão:</label>
+                                <input type="number" id="card-number" placeholder="Digite o número do cartão">
+
+                                <label for="cvv">CVV:</label>
+                                <input type="number" id="cvv" placeholder="Digite o CVV">
+                            </div>
+
+                            <a id="pagar" href="{% url 'pagina_inicial' %}">Confirmar Pagamento</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+        const pixInfo = document.getElementById('pix-info');
+        const cardFields = document.getElementById('card-fields');
+        const paymentForm = document.getElementById('payment-form');
+
+        paymentMethods.forEach(method => {
+            method.addEventListener('change', () => {
+                if (method.value === 'pix') {
+                    pixInfo.classList.remove('hidden');
+                    cardFields.style.display = 'none';
+                } else {
+                    pixInfo.classList.add('hidden');
+                    cardFields.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

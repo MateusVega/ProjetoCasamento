@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliança</title>
+    <link rel="stylesheet" href="{% static 'menuselection/menuselection.css' %}">
+    <style>
+        #main {
+            width: 100%;
+            background-color: #f1f1f1; /* Fundo da seção principal */
+            padding: 40px;
+            border-radius: 15px; /* Bordas arredondadas */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-bottom: 20px; /* Espaçamento na parte inferior */
+        }
+
+        #title_main {
+            text-align: center; /* Centraliza o texto */
+            font-size: 2.2em; /* Tamanho da fonte */
+            margin-bottom: 30px; /* Espaçamento inferior */
+            color: #8B2335; /* Cor do título */
+            font-family: 'Playfair Display', serif; /* Fonte estilizada */
+        }
+
+        #review {
+            margin-top: 20px; /* Margem superior para espaçamento */
+            padding: 20px; /* Preenchimento interno */
+            background-color: #ffffff; /* Fundo branco para destaque */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        #review h3 {
+            font-size: 1.8em; /* Tamanho da fonte para subtítulos */
+            margin-bottom: 15px; /* Espaçamento inferior */
+            color: #8B2335; /* Cor dos subtítulos */
+            font-family: 'Poppins', sans-serif; /* Fonte padrão */
+            border-bottom: 2px solid #8B2335; /* Linha abaixo do subtítulo */
+            padding-bottom: 5px; /* Espaçamento inferior da linha */
+        }
+
+        #review p {
+            font-size: 1.1em; /* Tamanho da fonte dos parágrafos */
+            margin-bottom: 10px; /* Espaçamento entre parágrafos */
+            color: #333; /* Cor do texto */
+            font-family: 'Poppins', sans-serif; /* Fonte padrão */
+        }
+
+        #main a {
+            padding: 12px 20px; /* Preenchimento do botão */
+            background-color: #8B2335; /* Cor de fundo do botão */
+            color: white; /* Cor do texto do botão */
+            border: none; /* Remove borda padrão */
+            border-radius: 10px; /* Bordas arredondadas */
+            font-family: 'Poppins', sans-serif; /* Fonte padrão */
+            font-size: 16px; /* Tamanho da fonte do botão */
+            cursor: pointer; /* Cursor de mão ao passar sobre o botão */
+            transition: background-color 0.3s; /* Transição para hover */
+            display: block; /* Torna o botão um bloco para centralização */
+            margin: 20px auto; /* Centraliza o botão horizontalmente */
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        #main a:hover {
+            background-color: #A23848; /* Cor ao passar o mouse */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="{% url 'pagina_inicial' %}">Aliança</a>
+            </div>    
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#" class="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <div id="header">
+                <a href="#">Formulario</a>
+                <a href="#">Items</a>
+                <a href="#">Convite</a>
+                <a href="#" id="using">Revisão</a>
+                <a href="#">Pagamento</a>
+            </div>
+            <div id="main">
+                <h2 id="title_main">Revisão do Plano</h2>
+                <div id="review">
+                    <h3>Detalhes do Casamento</h3>
+                    <p><strong>Noiva:</strong> {{ noiva }}</p>
+                    <p><strong>Noivo:</strong> {{ noivo }}</p>
+                    <p><strong>Data:</strong> {{ data }}</p>
+                    <p><strong>Convidados:</strong> {{ convidados }}</p>
+    
+                    <h3>Detalhes do Plano</h3>
+                    <p><strong>Decoração:</strong> {{ decoracao }}</p>
+                    <p><strong>Buffet:</strong> {{ buffet }}</p>
+                    <p><strong>Itens da Cerimônia:</strong> {{ items_cerimonia }}</p>
+                    <p><strong>Flores:</strong> {{ flores }}</p>
+                    <p><strong>Transporte:</strong> {{ transporte }}</p>
+                </div>
+                <a href="{% url 'payment:index' %}">Pagar</a>
+            </div>
+            </div>
+    </main>
+</body>
+</html>
